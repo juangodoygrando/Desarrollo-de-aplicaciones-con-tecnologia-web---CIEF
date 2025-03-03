@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --parteCentral: 1200px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  background-image: url(./img/vecteezy_red-wave-watercolor-illustration_26976526.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+
+  img {
+    position: block;
+    width: 30%;
+  }
+  nav {
+    button {
+      border: none;
+      font-size: 1.5rem;
+      color: white;
+      padding: 14px 28px;
+      cursor: pointer;
+      border-radius: 5px;
+      display: inline-block;
+      margin: 5px;
+      background-image: linear-gradient(to right, #dc3545, #e0666e);
+    }
+    button:hover {
+      :hover {
+        background-image: linear-gradient(to right, #d32838, #e0666e);
+      }
+    }
+  }
+}
+
+.parteMedio {
+  width: var(--parteCentral);
+  margin: 0 auto;
+}
+
+.proyectos {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+
+  .card {
+    background-color: rgba(126, 82, 82, 0.623);
+    height: 400px;
+    width: 400px;
+    align-items: center;
+    border-radius: 1rem;
+
+    h2 {
+      padding: 1rem 0 1rem 0;
+      text-align: center;
+    }
+    hr{
+      width: 80%;
+      margin: 0 auto;
+      padding: 0.3rem;
+    }
+
+    img {
+      display: flex;
+      width: 290px;
+      height: 150px;
+      size: cover;
+      margin: 0 auto;
+    }
+    p{
+      padding: 1.2rem 0 1.2rem 0;
+      text-align: center;
+    }
+    .buttonCard{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 80%;
+      margin: 0 auto;
+      gap: 0.5rem;
+      
+    }
+    div>button {
+      background-image: linear-gradient(to right, #dc3545, #e0666e);
+      
+    }
+    .liveDemo{
+      width: 70%;
+      margin: 0 auto;
+      padding: 0.5rem;
+      
+    }
+  }
+}

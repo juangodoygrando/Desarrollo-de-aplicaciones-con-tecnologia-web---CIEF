@@ -19,7 +19,7 @@ El repositorio está organizado en carpetas según los temas abordados:
 /
 ├── html-css/        # Prácticas de HTML5 y CSS3
 ├── javascript/      # Ejercicios y proyectos en JavaScript
-├── php/            # Código de backend con PHP
+├── php/phyton       # Pendiente a determinar
 ├── databases/      # Prácticas con MySQL y MongoDB
 ├── frameworks-cms/ # Pruebas con frameworks y CMS
 └── README.md       # Este archivo

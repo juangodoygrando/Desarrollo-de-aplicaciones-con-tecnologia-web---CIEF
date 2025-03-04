@@ -115,10 +115,14 @@ nav {
   }
 }
 
-section > h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin: 2rem 0;
+
+.sectionOpiniones{
+  height: 12rem;
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
 }
 .opiniones {
   display: grid;
@@ -140,6 +144,7 @@ section > h2 {
 
     font-style: italic;
   }
+  
 }
 
 .footer {
@@ -157,6 +162,7 @@ section > h2 {
     font-size: 0.8rem;
     &:hover {
       color: var(--enfasiscolor);
+    
     }
   }
   li {
@@ -166,6 +172,7 @@ section > h2 {
     font-weight: 700;
   }
 }
+
 .logosRedes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -173,5 +180,9 @@ section > h2 {
   img {
     width: 40%;
     margin-top: 0.5rem;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
+
 }

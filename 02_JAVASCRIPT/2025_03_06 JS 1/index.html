@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Utilizando Js</title>
+  </head>
+  <body>
+    <script>
+      /* let mensaje= "Hoy es viernes ";
+              console.log(mensaje);
+              alert(mensaje);
+              let respuesta= prompt("¿Cómo te llamas?");
+              alert(mensaje+respuesta); */
+
+      /* respuesta =confirm("Esta lloviendo?");
+
+              if(respuesta){
+                  alert("Lleva paraguas");
+              }else{
+                  alert("No lleves paraguas");
+              } */
+
+      // alert(respuesta);
+
+      alert("Calculadora Basica");
+
+      let operacion = prompt("Ingrese la operación a realizar: +, -, * o /");
+
+      switch (operacion) {
+        case "+":
+        case "-":
+        case "*":
+        case "/":
+          let num1 = parseFloat(prompt("Ingrese el primer número"));
+          let num2 = parseFloat(prompt("Ingrese el segundo número"));
+
+          let respuesta = `${num1} ${operacion} ${num2} =`;
+          let mensaje = "";
+
+          switch (operacion) {
+            case "+":
+              mensaje = respuesta + (num1 + num2);
+              alert(mensaje);
+              break;
+            case "-":
+              mensaje = respuesta + (num1 - num2);
+              alert(mensaje);
+              break;
+            case "*":
+              mensaje = respuesta + num1 * num2;
+              alert(mensaje);
+              break;
+            case "/":
+              if (num2 == 0) {
+                alert("No se puede dividir por 0");
+              } else {
+                mensaje = respuesta + num1 / num2;
+                alert(mensaje);
+              }
+
+              break;
+          }
+
+          break;
+        default:
+          alert("Operación no válida");
+      }
+    </script>
+  </body>
+</html>

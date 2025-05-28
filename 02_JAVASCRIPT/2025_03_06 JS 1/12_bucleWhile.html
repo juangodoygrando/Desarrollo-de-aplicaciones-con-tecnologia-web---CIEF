@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bucle while</title>
+  </head>
+  <body>
+    <script>
+      /* let edad = prompt("Por favor dime la edad") */
+
+      /* while(edad<0 || edad>100){
+            edad=prompt(`${edad} no es una edad correcta \n Por favor intentalo de nuevo` )
+        }
+
+        alert(`Me has dicho qeu tienes ${edad} años`) */
+      let control = true;
+
+      while (control) {
+        edad = edad.trim();
+
+        let edad = prompt(
+          "Por favor dime la edad. \n O escribe X para finalizar"
+        ) else if (edad.length == 0){
+          alert("Hay que introducir una edad correcta");
+        }else if (edad.toLowerCase() == "x") {
+          //caso de querer finalizar el programa
+          alert("Programa finalizado.\n Hasta luego");
+          control = false;
+        } else if (edad < 0 || edad > 100) {
+          //casos de edad incorrecta
+          alert(
+            `${edad} no es una edad correcta \n Por favor intentalo de nuevo`
+          );
+        } else {
+          alert(`Me has dicho qeu tienes ${edad} años`);
+          control = false;
+        }
+      }
+    </script>
+  </body>
+</html>

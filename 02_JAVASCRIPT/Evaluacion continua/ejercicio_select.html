@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios</title>
+  </head>
+  <body>
+    <header><h1>Ejercicios de Select</h1></header>
+    <main>
+      <form action="#" name="formSelect">
+        <fieldset>
+          <legend>Mapa Mundi</legend>
+          <div>
+            <label for="continente">Selecciona el continente</label>
+            <select name="continentes" id="continente">
+              <option value="#">Elije una opcion</option>
+              <option value="Europa">Europa</option>
+              <option value="America">America</option>
+              <option value="Africa">Africa</option>
+            </select>
+          </div>
+          <div id="paises"></div>
+          <div id="ciudades"></div>
+        </fieldset>
+      </form>
+    </main>
+
+    <script>
+      let continente = document.getElementById("continente");
+
+      continente.addEventListener("change", () => {
+        let continenteSeleccionado = continente.value;
+
+        if (continenteSeleccionado == "Europa") {
+          document.getElementById("paises").innerHTML = `
+            <label for="pais">Selecciona un pais</label>
+            <select name="paises" id="pais">
+              <option value="">Elije una opcion</option>
+              <option value="España">España</option>
+              <option value="Francia">Francia</option>
+              <option value="Italia">Italia</option>
+            </select>
+          `;
+        } else if (continenteSeleccionado == "America") {
+          document.getElementById("paises").innerHTML = `
+            <label for="pais">Selecciona un pais</label>
+            <select name="paises" id="pais">
+              <option value="">Elije una opcion</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Chile">Chile</option>
+              <option value="Brasil">Brasil</option>
+            </select>
+          `;
+        } else if (continenteSeleccionado == "Africa") {
+          document.getElementById("paises").innerHTML = `
+            <label for="pais">Selecciona un pais</label>
+            <select name="paises" id="pais">
+              <option value="">Elije una opcion</option>
+              <option value="Egipto">Egipto</option>
+              <option value="Sudáfrica">Sudáfrica</option>
+              <option value="Nigeria">Nigeria</option>
+            </select>
+          `;
+        }
+
+        
+        let paises = document.getElementById("pais");
+        paises.addEventListener("change", () => {
+          let paisSeleccionado = paises.value;
+
+          if (paisSeleccionado == "España") {
+            document.getElementById("ciudades").innerHTML = `
+              <label for="pais">ciudades</label>
+            <select name="ciudades" id="ciudades">
+              <option value="">Elije una opcion</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            `;
+          } else if (paisSeleccionado == "Francia") {
+            document.getElementById("ciudades").innerHTML = `
+             <label for="pais">ciudades</label>
+            <select name="ciudades" id="ciudades">
+              <option value="">Elije una opcion</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            `;
+          } else if (paisSeleccionado == "Italia") {
+            document.getElementById("ciudades").innerHTML = `
+              <label for="pais">ciudades</label>
+            <select name="ciudades" id="ciudades">
+              <option value="">Elije una opcion</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            `;
+          }else if (paisSeleccionado == "Argentina") {
+            document.getElementById("ciudades").innerHTML = `
+             <label for="pais">ciudades</label>
+            <select name="ciudades" id="ciudades">
+              <option value="">Elije una opcion</option>
+              <option value="Mendoza">Mendoza</option>
+              <option value="Córdoba">Córdoba</option>
+              <option value="Buenos Aires">Buenos Aires</option>
+            </select>
+            `;
+          } else if (paisSeleccionado == "Chile") {
+            document.getElementById("ciudades").innerHTML = `
+              <label for="pais">ciudades</label>
+            <select name="ciudades" id="ciudades">
+              <option value="">Elije una opcion</option>
+              <option value="Santiago ">Santiago </option>
+              <option value="Reñaca">Reñaca</option>
+              <option value="Viña">Viña</option>
+            </select>
+            `;
+          }else if (paisSeleccionado == "Brasil") {
+            document.getElementById("ciudades").innerHTML = `
+             <label for="pais">ciudades</label>
+            <select name="ciudades" id="ciudades">
+              <option value="">Elije una opcion</option>
+              <option value="São Paulo">São Paulo</option>
+              <option value="Río de Janeiro">Río de Janeiro</option>
+              <option value="Brasilia">Brasilia</option>
+            </select>
+            `;
+          } else if (paisSeleccionado == "Egipto") {
+            document.getElementById("ciudades").innerHTML = `
+              <label for="pais">ciudades</label>
+            <select name="ciudades" id="ciudades">
+              <option value="">Elije una opcion</option>
+              <option value="El Cairo">El Cairo</option>
+              <option value="Alejandría">Alejandría</option>
+              <option value="Guiza">Guiza</option>
+            </select>
+            `;
+          } else if (paisSeleccionado == "Sudáfrica") {
+            document.getElementById("ciudades").innerHTML = `
+             <label for="pais">ciudades</label>
+            <select name="ciudades" id="ciudades">
+              <option value="">Elije una opcion</option>
+              <option value="Johannesburgo">Johannesburgo</option>
+              <option value="Ciudad del Cabo">Ciudad del Cabo</option>
+              <option value="Durban">Durban</option>
+            </select>
+            `;
+          } else if (paisSeleccionado == "Nigeria") {
+            document.getElementById("ciudades").innerHTML = `
+              <label for="pais">ciudades</label>
+            <select name="ciudades" id="ciudades">
+              <option value="">Elije una opcion</option>
+              <option value="Kano">Kano</option>
+              <option value="Abuya">Abuya</option>
+              <option value="Lagos">Lagos</option>
+            </select>
+            `;
+          }
+          
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <style>
+      :focus {
+        background-color: rgb(228, 129, 228);
+      }
+      div {
+        margin: 1rem 0;
+      }
+      #textoEmail {
+        width: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Catalogo de etiquetas de formularios</h1>
+    </header>
+    <main>
+      <form action="#" id="form1" name="myForm1">
+        <fieldset>
+          <legend>Inputs Basicos</legend>
+          <div>
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Escribe tu nombre"
+              required
+              minlength="5"
+              maxlength="10"
+              autofocus
+              title="Escribe tu nombre, minimo 5 caracteres y maximo 10"
+            />
+          </div>
+          <div>
+            <label>Apellido <input type="text" name="apellido" /></label>
+          </div>
+          <div>
+            <label
+              >Contraseña <input type="password" name="password" id="password"
+            /></label>
+          </div>
+          <div>
+            <label
+              >Numero
+              <input type="number" name="numero" min="0" max="10" step=".1"
+            /></label>
+          </div>
+          <div>
+            <input type="hidden" name="hidden" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Datos Persoanles</legend>
+          <div>
+            <label>Email: <input type="email" name="email" /></label>
+          </div>
+          <div>
+            <label>Telefono: <input type="tel" name="tel" /></label>
+          </div>
+          <div>
+            <label>URL: <input type="url" name="url" /></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Radio Buttons</legend>
+          <div>
+            <label
+              ><input
+                type="radio"
+                name="colores"
+                value="rojo"
+                checked
+              />Rojo</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="radio" name="colores" value="azul" />Azul</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="radio" name="colores" value="verde" />Verde</label
+            >
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Checkbox</legend>
+          <div>
+            <label
+              ><input
+                type="checkbox"
+                name="condiciones"
+                id="condiciones"
+              />Acepto las condiciones</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="checkbox" name="info" checked />Acepto recibir
+              informacion comercial</label
+            >
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>fechas</legend>
+          <div>
+            <label
+              >Año-Mes-Dia-Hora-Minutos
+              <input type="datetime-local" name="datetime-local"
+            /></label>
+          </div>
+          <div>
+            <label>Año-Mes-Dia<input type="date" name="data" /></label>
+          </div>
+          <div>
+            <label>Hora-Minutos <input type="time" name="time" /></label>
+          </div>
+          <div>
+            <label>Semana <input type="week" name="week" /></label>
+          </div>
+          <div>
+            <label>Mes <input type="month" name="month" /></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tipos Varios</legend>
+          <div>
+            <label for="color"
+              >Color: <input type="color" name="color" id="color"
+            /></label>
+          </div>
+          <div>
+            <label for=""
+              >Ficheros: <input type="file" name="file" multiple accept=".pdf"
+            /></label>
+          </div>
+          <div>
+            <label for="">Buscar: <input type="search" name="search" /></label>
+          </div>
+          <div>
+            <label for=""
+              >Range:
+              <input type="range" name="range" min="0" max="50" id="range" />
+              <span id="rangeNumber"></span
+            ></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Seleccion desde lista</legend>
+          <div>
+            <label for="marcas">Elige tu marca favorita</label
+            ><select name="marcas" id="">
+              <option value="">Elije una opcion</option>
+              <option value="Mercedes Benz">Mercedes Benz</option>
+              <option value="Audi">Audi</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="Posche">Posche</option>
+            </select>
+          </div>
+          <div>
+            <label for="lenguaje">Selecciona tu lenguaje</label>
+            <input type="text" list="lenguajes" />
+            <datalist id="lenguajes">
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+              <option value="JAVASCRIPT">JAVASCRIPT</option>
+              <option value="REACT">REACT</option>
+            </datalist>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Text Area</legend>
+          <div>
+            <label for="feedback"
+              >Feedback <textarea cols="30" rows="10"></textarea>
+            </label>
+            <label for="textoEmail"
+              >Teexto Email <textarea id="textoEmail"></textarea>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Inputs Globales</legend>
+          <input type="submit" value="Enviar formulario" />
+          <input type="reset" value="Borrar el formulario" />
+          <input type="button" value="Soy un boton" />
+        </fieldset>
+        <fieldset>
+          <legend>Buttons</legend>
+          <button type="submit" disabled id="btnSubmit">
+            Enviar Formulario
+          </button>
+          <button type="reset">Borrar el Formulario</button>
+          <button type="button">Soy un boton</button>
+          <button disabled="disabled">Boton desabilitado</button>
+        </fieldset>
+      </form>
+    </main>
+    <script>
+      //Obtener los valores del formulario
+
+      //Sistema 1 por #id
+      const form1 = document.getElementById("form1");
+
+      form1.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const nombre = document.getElementById("nombre").value;
+        const password = document.getElementById("password").value;
+
+        console.log(nombre, password, colores);
+      });
+
+      //Sistema 2  por name
+
+      const myForm1 = document.forms["myForm1"];
+
+      myForm1.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const nombre = myForm1["nombre"].value.trim();
+        if (nombre.length < 2) {
+          alert('Error en en nombre');
+        }
+        const apellido = myForm1["apellido"].value;
+
+        const password = myForm1["password"].value;
+        const colores = myForm1["colores"].value;
+
+        console.log(nombre, apellido, password, colores);
+      });
+      const checkboxCondiciones = document.getElementById("condiciones");
+
+      checkboxCondiciones.addEventListener("change", () => {
+        const btnSubmit = document.getElementById("btnSubmit");
+        if (checkboxCondiciones.checked) {
+          btnSubmit.disabled = false;
+        } else {
+          btnSubmit.disabled = true;
+        }
+      });
+
+      const colorSeleccionado = document.getElementById("color");
+
+      colorSeleccionado.addEventListener("change", () => {
+        const color = colorSeleccionado.value;
+        document.querySelector("body").style.color = color;
+      });
+
+      const range = document.getElementById("range");
+
+      range.addEventListener("change", () => {
+        const valorRange = range.value;
+        document.getElementById("rangeNumber").textContent = valorRange;
+      });
+    </script>
+  </body>
+</html>

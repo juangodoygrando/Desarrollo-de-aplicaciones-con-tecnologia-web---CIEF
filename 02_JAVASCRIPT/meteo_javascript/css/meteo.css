@@ -1,0 +1,111 @@
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  color: #333;
+}
+
+header {
+  background-color: #0077b6;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+input[type="text"] {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 200px;
+}
+
+button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #023e8a;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0077b6;
+}
+
+section:nth-of-type(2) {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background-color: #526a97cc;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  text-align: center;
+}
+
+#iconNow img {
+  width: 400px;
+  margin: 1rem 0;
+}
+
+p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+
+
+#pronostico {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+#pronostico div {
+  background-color: #ffffffcc;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+#pronostico div:hover {
+  transform: translateY(-5px);
+}
+
+#pronostico img {
+  width: 60px;
+  height: 60px;
+  margin: 0.5rem 0;
+}
+
+.fechaSeparada,
+.horaSeparada {
+  font-weight: bold;
+  color: #023e8a;
+}
+
+.temp {
+  font-size: 1.2rem;
+  color: #d62828;
+}
+
+.humidity {
+  font-size: 1rem;
+  color: #0077b6;
+}

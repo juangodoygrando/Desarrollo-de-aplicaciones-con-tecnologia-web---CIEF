@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Mas dels Avets</title>
+    <meta
+      name="description"
+      content="Disfruta de una estancia única en el Hotel Mas dels Avets, en medio de la naturaleza y las montañas. Escapadas tranquilas con comodidad y servicios personalizados."
+    />
+    <meta
+      name="keywords"
+      content="hotel rural, Mas dels Avets, turismo , montañas, naturaleza, alojamiento, escapadas rurales, masía, turismo de montaña, retiro natural"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Juan Ignacio Godoy Grando" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta property="og:title" content="Hotel Mas dels Avets" />
+    <meta
+      property="og:description"
+      content="Escápate a un rincón de paz y naturaleza en el Hotel Mas dels Avets. Alojamiento de calidad en el corazón de las montañas."
+    />
+    <meta property="og:url" content="https://www.hotelmasdelsavets.com" />
+    <meta
+      property="og:image"
+      content="https://www.hotelmasdelsavets.com/img/hermosa-vista-montanas-rocosas-arboles.avif"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hotel Mas dels Avets" />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hotel Mas dels Avets" />
+    <meta
+      name="twitter:description"
+      content="Vive la experiencia de un hotel en el corazón de las montañas con el confort que necesitas. Hotel Mas dels Avets te espera para ofrecerte descanso y tranquilidad."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.hotelmasdelsavets.com/img/hermosa-vista-montanas-rocosas-arboles.avif"
+    />
+    <meta name="twitter:url" content="https://www.hotelmasdelsavets.com" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <a href="#inicioSkipLink" class="skip-link">Saltar al contenido principal</a>
+    <header>
+      <nav aria-label="Menú principal">
+        <ul>
+          <li><a href="./inicio.html">Inicio</a></li>
+          <li><a href="./html/habitaciones.html">Habitaciones</a></li>
+          <li><a href="./html/restaurante.html">Restaurante</a></li>
+          <li><a href="./html/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main withXL">
+      <h1 id="inicioSkipLink" tabindex="0">Hotel Mas dels Avets</h1>
+      <img
+        tabindex="0"
+        class="imgCentral"
+        src="./img/hotel.jpg"
+        alt="Vista panorámica del Hotel Mas dels Avets rodeado de montañas y bosques"
+      />
+      <section>
+        <div class="contenedorDormitorio">
+          <img
+          tabindex="0"
+            src="./img/dormitori.avif"
+            alt="Nuestros dormitorios son extremadamente confortables y están perfectamente equipados"
+          />
+          <div class="contenedorDormitorioTexto">
+            <h2 tabindex="0">Nuestras habitaciones</h2>
+            <p tabindex="0">Todas nuestras habitaciones disponen de:</p>
+            <ul> 
+              <li tabindex="0">Baño privado</li>
+              <li tabindex="0">TV conectada a satélite</li>
+              <li tabindex="0">Aire Acondicionado</li>
+              <li tabindex="0">Caja de seguridad</li>
+            </ul>
+            <a href="./inicio.html">Volver al inicio</a>
+          </div>
+        </div>
+        <div class="contenedorRestaurante">
+          <img
+          tabindex="0"
+            src="./img/menjador.avif"
+            alt="Sala principal del restaurante, con capacidad para muchos comensales"
+          />
+          <div class="contenedorRestauranteTexto">
+            <h2 tabindex="0">El Restaurante</h2>
+            <p tabindex="0">Ofrecemos menús diarios con productos de temporada.</p>
+            <p tabindex="0">Le recomendamos consulte nuestra excelente carta de vinos.</p>
+            <p tabindex="0">Elaboramos postres artesanos diariamente.</p>
+            <a href="./inicio.html">Volver al inicio</a>
+          </div>
+        </div>
+      </section>
+      <section class="contacteConNosotros">
+        <h3 tabindex="0">Contacte con nosotros</h3>
+        <div class="formularios">
+          <form action="#" method="post" aria-labelledby="form-title">
+            <div class="form-columns">
+              <div class="columna">
+                <fieldset>
+                  <legend id="form-title" tabindex="0">Datos Personales</legend>
+
+                  <label for="nombre">Nombre *:</label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    required
+                    aria-required="true"
+                    aria-describedby="errorNombre"
+                  />
+                  <p id="errorNombre" class="errores"></p>
+
+                  <label for="apellidos">Apellidos *:</label>
+                  <input
+                    type="text"
+                    id="apellidos"
+                    name="apellidos"
+                    required
+                    aria-required="true"
+                    aria-describedby="errorApellido"
+                  />
+                  <p id="errorApellido" class="errores"></p>
+                </fieldset>
+                
+              </div>
+
+              <div class="columna">
+                <fieldset>
+                  <legend tabindex="0">Datos de la reserva</legend>
+
+                  <label for="entrada">Fecha de entrada:</label>
+                  <input
+                    type="date"
+                    id="entrada"
+                    name="entrada"
+                    required
+                    aria-required="true"
+                  />
+
+                  <label for="salida">Fecha de salida:</label>
+                  <input
+                    type="date"
+                    id="salida"
+                    name="salida"
+                    required
+                    aria-required="true"
+                  />
+
+                  <div aria-labelledby="alojamiento-opcion">
+                    <p id="alojamiento-opcion">Tipo de alojamiento:</p>
+
+                    <label
+                      ><input
+                      tabindex="0"
+                        type="radio"
+                        name="tipo"
+                        value="solo"
+                        checked
+                      />Sólo Alojamiento</label
+                    ><br />
+                    <label
+                      ><input
+                      tabindex="0"
+                        type="radio"
+                        name="tipo"
+                        value="desayuno"
+                      />Desayuno incluido</label
+                    >
+                  </div>
+                </fieldset>
+                <p class="volver">
+                  <a href="#main">Volver al inicio</a>
+                </p>
+                <div class="boton-contenedor">
+                  <button type="submit" class="buttonEnviar" aria-label="Enviar los datos del formulario">Enviar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <h2>SOBRE NOSOTROS</h2>
+        <ul>
+          <li>
+            <a href="#" aria-label="Información sobre nuestra empresa"
+              >¿Quiénes somos?</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              aria-label="Formulario de contacto y datos de la empresa"
+              >Contacto</a
+            >
+          </li>
+          <li>
+            <a href="#" aria-label="Blog con artículos sobre hoteles rurales"
+              >Blog Hoteles Rurales</a
+            >
+          </li>
+          <li>
+            <a href="#" aria-label="Consulta nuestras condiciones legales"
+              >Condiciones legales</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              aria-label="Información sobre nuestra política de cookies"
+              >Política de cookies</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2>DESCÁRGATE LA APP</h2>
+        <div class="descargarApp">
+          <img
+            src="./img/google-play2.png"
+            alt="Logotipo de Google Play para descargar nuestra aplicación móvil"
+          />
+          <img
+            src="./img/apple-store2.png"
+            alt="Logotipo de la App Store para descargar nuestra aplicación móvil"
+          />
+        </div>
+      </div>
+      <div>
+        <h2>SÍGUENOS</h2>
+        <div class="logos-redes">
+          <a href="#" aria-label="Ir a nuestra página de Facebook">
+            <img
+              class="social-icon"
+              src="./img/png-transparent-facebook.png"
+              alt="Icono de Facebook"
+            />Facebook
+          </a>
+          <a href="#" aria-label="Ir a nuestra página de Twitter">
+            <img
+              class="social-icon"
+              src="./img/png-transparent-twitter.png"
+              alt="Icono de Twitter"
+            />Twitter
+          </a>
+          <a href="#" aria-label="Ir a nuestra página de Instagram">
+            <img
+              class="social-icon"
+              src="./img/png-transparent-instagram.png"
+              alt="Icono de Instagram"
+            />Instagram
+          </a>
+          <p class="copyright">© Juan Ignacio Godoy Grando</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/hotel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+Open weather API key
+
+761e204caa9eda6dde4b4646cf7a4e80
+
+https://api.openweathermap.org/data/2.5/weather?units=metric&lang=es&q=Barcelona&appid=761e204caa9eda6dde4b4646cf7a4e80

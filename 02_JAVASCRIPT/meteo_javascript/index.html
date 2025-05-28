@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My meteo</title>
+    <link rel="stylesheet" href="css/meteo.css" />
+  </head>
+  <body>
+    <header><h1>Consulta el Tiempo</h1></header>
+
+    <section>
+      <form name="meteoForm" id="meteoForm">
+        <label
+          >ciudad:
+          <input type="text" name="city" id="city" />
+          <button type="submit">Consultar</button>
+        </label>
+      </form>
+    </section>
+    <section>
+      <div>
+        <p id="description"></p>
+        <p id="temp"></p>
+        <p id="feels_like"></p>
+        <p id="temp_min"></p>
+        <p id="temp_max"></p>
+        <p id="humidity"></p>
+        <p id="speed"></p>
+        <p id="sunrise"></p>
+        <p id="sunset"></p>
+      </div>
+      <div id="iconNow"></div>
+      <div id="pronostico"></div>
+    </section>
+
+    <script defer src="js/meteo.js"></script>
+  </body>
+</html>
+
+

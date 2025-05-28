@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  box-sizing: border-box;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+
+:root {
+  --breakpoint: 1200px;
+  --color-clar: rgb(245, 245, 245);
+  --color-secundari: #a46d3c;
+  --color-secundari50x100: hsla(28, 46%, 44%, 0.5);
+  --font-titols: "Lexend", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--color-clar);
+}
+
+.breakpoint {
+  max-width: var(--breakpoint);
+  margin: 0 auto;
+}
+
+header {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 3fr 1fr;
+
+  .logoCuina {
+    max-width: 250px;
+    height: 120px;
+  }
+  .redesSociales {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    img {
+      height: 45px;
+    }
+  }
+  .titleCuina {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 4fr));
+
+    div {
+      display: grid;
+      align-items: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 100;
+      text-shadow: 2px 2px 3px black;
+    }
+    .divina {
+      color: var(--color-secundari);
+      text-shadow: 2px 2px 3px var(--color-secundari);
+      font-size: 2.4rem;
+    }
+  }
+
+  @media (max-width: 930px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    padding: 1.5rem 0 1.5rem 0;
+
+    .titleCuina {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.hrColor {
+  height: 2px;
+  background-color: var(--color-secundari);
+  border: none;
+}
+nav {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  text-align: center;
+  padding: 1rem;
+
+  @media (max-width:930px){
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 1rem;
+  }
+
+}
+.hrOscura {
+  width: 95%;
+  margin: 0 auto;
+  height: 0.2rem;
+  background-color: grey;
+  
+  
+}
+
+main {
+  .grillaMain {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: var(--breakpoint);
+    row-gap: 2rem;
+  }
+  .card {
+    img {
+      max-width: 100%;
+    }
+    h2 {
+      color: var(--color-secundari);
+      font-size: 2.2rem;
+      text-align: center;
+      padding: 1rem 0 1rem 0;
+    }
+    button {
+      background-color: var(--color-secundari);
+      color: white;
+      border: none;
+      height: 55px;
+      width: 95px;
+      align-content: center;
+      border-radius: 5px;
+    }
+    .divButton {
+      width: 100%;
+      display: grid;
+      justify-content: space-around;
+      padding: 2rem;
+    }
+  }
+}
+
+.sigueinteAnterior {
+  font-weight: 800;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+
+  .siguiente {
+    display: grid;
+    a {
+      text-align: end;
+    }
+  }
+}
+
+footer {
+  background-color: var(--color-secundari);
+  .footerImg {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 1rem 0 1rem 0;
+
+    img {
+      height: 5rem;
+      border-radius: 6px;
+    }
+  }
+  .footerText {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 1rem 0 1rem 0;
+
+    a {
+      color: white;
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
+  }
+}

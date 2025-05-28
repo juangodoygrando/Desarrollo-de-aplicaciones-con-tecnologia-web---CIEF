@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios varios</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicios DOM - Objetos - Arrays</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Ejercicio 1</h2>
+            <h3>Nuestras flores</h3>
+            <div id="ejercicio1"></div>
+        </section>
+        <section>
+            <h2>Ejercicio 2</h2>
+            <h3>Flores de color blanco que florecen en verano</h3>
+            <div id="ejercicio2"></div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 3</h2>
+            <h3>Selección por características</h3>
+            <form id="form-seleccion" name="formEj3">
+                <fieldset>
+                    <div>
+                        <p>Color:</p>
+                        <label><input type="radio" name="color" value="cualquiera" checked />Cualquiera</label>
+                        <label><input type="radio" name="color" value="blanco" />Blanco</label>
+                        <label><input type="radio" name="color" value="rojo" />Rojo</label>
+                        <label><input type="radio" name="color" value="rosa" />Rosa</label>
+                    </div>
+                    <div>
+                        <p>Floración:</p>
+                        <label><input type="radio" name="floracion" value="cualquiera" checked />Cualquiera</label>
+                        <label><input type="radio" name="floracion" value="primavera" />Primavera</label>
+                        <label><input type="radio" name="floracion" value="verano" />Verano</label>
+                        <label><input type="radio" name="floracion" value="otoño" />Otoño</label>
+                        <label><input type="radio" name="floracion" value="invierno" />Invierno</label>
+                    </div>
+                    <div>
+                        <p>Stock</p>
+                        <label><input type="radio" name="stock" value="cualquiera" checked />Cualquiera</label>
+                        <label><input type="radio" name="stock" value="true" />Con
+                            stock</label>
+                        <label><input type="radio" name="stock" value="false" />Sin
+                            stock</label>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="ejercicio3"></div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 4</h2>
+            <p>Seleccionar flor por nombre</p>
+
+            <div id="ejercicio4"></div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 5</h2>
+            <p>Añadir flor a la lista</p>
+            <br>
+            <form action="#ejercicio5" name="formEj5">
+                <div>
+                    <label for="nombreEj5">Ingresa el nombre: <input type="text" name="nombreEj5" /></label>
+                </div>
+                <br>
+                <div>
+                    <label for="colorEj5">Ingresa el color: <input type="text" name="colorEj5" /></label>
+                </div>
+<br>
+                <div>
+                <label for="floracionEj5">Ingresa la estacion de floracion: 
+                    <select name="floracionEj5" id="floracionEj5">
+                        <option value="primavera">Primavera</option>
+                        <option value="otono">Otono</option>
+                        <option value="invierno">Invierno</option>
+                        <option value="verano">Verano</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <input type="radio" name="stock" id="trueEj5" checked value="true">
+                    <label for="">Con stock!</label>
+                    <br>
+                    <input type="radio" name="stock" id="falseEj5">
+                    <label for="">Sin stock</label>
+                </div>
+                <br>
+                <div>
+                    <input type="submit" value="Añadir flor" />
+                    <input type="reset" value="Borrar formulario" />
+                </div>
+
+
+            </form>
+            <div id="ejercicio5"></div>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
+
+
+<p id=""></p>

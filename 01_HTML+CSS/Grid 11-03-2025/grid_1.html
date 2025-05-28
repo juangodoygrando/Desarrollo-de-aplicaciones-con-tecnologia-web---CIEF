@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid template</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .container{
+            margin:1rem;
+            border: 2px solid blue;
+            height: 300px;
+            display: grid ;
+            grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+            grid-template-rows:150px 120px;
+            gap:1rem;
+        }
+        .elemento{
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            width: 200px;
+        }
+        .elemento1{
+            background-color: brown;
+        }
+        .elemento2{
+            background-color: rgb(105, 25, 172);
+        }.elemento3{
+            background-color: rgb(39, 182, 94);
+        }
+        .elemento4{
+            background-color: rgb(19, 172, 192);
+        }.elemento5{
+            background-color: rgb(236, 222, 18);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="elemento elemento1">1</div>
+        <div class="elemento elemento2">2</div>
+        <div class="elemento elemento3">3</div>
+        <div class="elemento elemento4">4</div>
+        <div class="elemento elemento5">5</div>
+    </div>
+</body>
+</html>

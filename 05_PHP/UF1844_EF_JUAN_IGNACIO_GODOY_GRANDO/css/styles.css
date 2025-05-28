@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Regular.woff2") format("woff2"),
+    url("../fonts/Lato/Lato-Regular.woff") format("woff"),
+    url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato, Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+h2 {
+  margin: 2rem 0 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+main>div {
+
+  text-align: left;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  section:first-child {
+    padding: 2rem;
+    border-right: 3px solid red;
+  }
+
+  section:last-child {
+    background-color: bisque;
+    text-align: center;
+  }
+}
+
+form {
+  padding: 1rem;
+  text-align: left;
+
+  div {
+    margin: 1rem 0;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .photo {
+    text-align: center;
+
+    img {
+      width: 40%;
+    }
+  }
+
+  label {
+    display: block;
+  }
+
+  input,
+  select {
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  button {
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  button[type='submit'] {
+    background-color: lightblue;
+  }
+
+  button[type='reset'] {
+    background-color: lightsalmon;
+  }
+
+  p {
+    text-align: center;
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.people {
+
+  display: flex;
+  flex-direction: column;
+
+  >div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+.card {
+  text-align: center;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+
+  img {
+    width: 50%;
+  }
+
+
+}
+
+/*
+main {
+
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        border: 2px solid #333;
+        max-width: 1000px;
+        margin: 1rem auto;
+        padding: 2rem;
+
+        div {
+            margin: 1rem 0;
+        }
+
+        label {
+            display : block;
+        }
+
+        input, select {
+            padding: 5px 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+}
+    */

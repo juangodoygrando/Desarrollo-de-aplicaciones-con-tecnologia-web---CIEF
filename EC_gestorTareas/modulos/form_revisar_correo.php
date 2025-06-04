@@ -48,6 +48,8 @@
     align-items: center;
     min-height: 70vh;
     padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .contenido-mensaje {

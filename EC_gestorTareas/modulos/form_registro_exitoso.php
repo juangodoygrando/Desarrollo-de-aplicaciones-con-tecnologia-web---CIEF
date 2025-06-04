@@ -63,10 +63,11 @@ if (isset($_SESSION['usuario_registrado'])) {
     align-items: center;
     min-height: 75vh;
     padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-radius: 20px;
 }
 
 .contenido-exito {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     padding: 50px 40px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -83,7 +84,7 @@ if (isset($_SESSION['usuario_registrado'])) {
 .icono-exito i {
     font-size: 5rem;
     color: #28a745;
-    animation: checkAnimation 0.6s ease-in-out;
+    
 }
 
 @keyframes checkAnimation {
@@ -101,7 +102,7 @@ if (isset($_SESSION['usuario_registrado'])) {
 }
 
 .contenido-exito h2 {
-    color: #155724;
+    color: #28a745;
     margin-bottom: 25px;
     font-size: 2rem;
     font-weight: bold;
@@ -109,7 +110,7 @@ if (isset($_SESSION['usuario_registrado'])) {
 
 .bienvenida {
     background-color: #d4edda;
-    color: #155724;
+    color: #28a745;
     padding: 20px;
     border-radius: 12px;
     margin: 25px 0;
@@ -126,7 +127,7 @@ if (isset($_SESSION['usuario_registrado'])) {
     padding: 25px;
     border-radius: 12px;
     margin: 25px 0;
-    border-left: 4px solid #28a745;
+    
 }
 
 .check-item {
@@ -180,25 +181,25 @@ if (isset($_SESSION['usuario_registrado'])) {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    background-color: #00c853;
     color: white;
     border: none;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #218838 0%, #1ea080 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+    background-color: #007b33;
+    
 }
 
 .btn-secundario {
-    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+  background-color: #2196f3;
+    
     color: white;
     border: none;
 }
 
 .btn-secundario:hover {
-    background: linear-gradient(135deg, #5a6268 0%, #343a40 100%);
+    background-color: #0b66c3;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(108, 117, 125, 0.3);
 }

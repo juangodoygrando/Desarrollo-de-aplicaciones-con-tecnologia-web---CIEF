@@ -22,12 +22,12 @@
         
         <div class="acciones">
             <a href="crear_cuenta.php" class="btn btn-primary">
-                <i class="fas fa-user-plus"></i> 
+                 
                 Registrarse de nuevo
             </a>
             
             <a href="login.php" class="btn btn-secundario">
-                <i class="fas fa-sign-in-alt"></i> 
+                 
                 Iniciar Sesión
             </a>
         </div>
@@ -86,12 +86,12 @@
 }
 
 .solucion {
-    background-color: #fff3cd;
+    background-color:rgba(255, 243, 205, 0.74);
     color: #856404;
     padding: 20px;
     border-radius: 8px;
     margin: 20px 0;
-    border: 1px solid #ffeaa7;
+    border: 1.5px solid #ffeaa7;
 }
 
 .acciones {
@@ -116,22 +116,22 @@
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #00c853;
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #007b33;
     transform: translateY(-2px);
 }
 
 .btn-secundario {
-    background-color: #6c757d;
+    background-color: #2196f3;
     color: white;
 }
 
 .btn-secundario:hover {
-    background-color: #5a6268;
+    background-color: #0b66c3;
     transform: translateY(-2px);
 }
 

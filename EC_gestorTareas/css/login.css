@@ -108,5 +108,5 @@ button[type="reset"]:hover {
 .error_cuenta p {
     color: red;
     margin-top: 1rem;
-    font-weight: bold;
+    font-weight:500;
 }

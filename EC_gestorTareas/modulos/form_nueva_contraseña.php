@@ -1,35 +1,271 @@
-<?php
-
-$token = isset($_GET['token']) ? htmlspecialchars($_GET['token']) : '';
-?>
-
-<form action="cambiar_contraseña.php" method="post">
-    <fieldset>
-        <h2>Crear nueva contraseña</h2>
-
-        <p>Ingresa tu nueva contraseña para continuar con el acceso a tu cuenta Taskin.</p>
-
-        <label for="nueva_contraseña">Nueva contraseña:</label>
-        <input type="password" name="nueva_contraseña" id="nueva_contraseña" required>
-
-        <label for="repetir_contraseña">Repite la contraseña:</label>
-        <input type="password" name="repetir_contraseña" id="repetir_contraseña" required>
-
-        <!-- Campo oculto con el token de recuperación -->
-        <input type="hidden" name="token" value="<?php echo $token; ?>">
-
-        <!-- Mensajes de error si existen -->
-        <div class="error_cuenta">
-            <?php if (isset($_SESSION['error_contraseña'])): ?>
-                <p><?php echo $_SESSION['error_contraseña']; ?></p>
-                <?php unset($_SESSION['error_contraseña']); ?>
-            <?php endif; ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contraseña - Taskin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="cambiar-contraseña">
+        <div class="contenido-form">
+            <div class="icono-form">
+                <i class="fas fa-key"></i>
+            </div>
+            
+            <h2>Crear nueva contraseña</h2>
+            
+            <p class="descripcion">Ingresa tu nueva contraseña para continuar con el acceso a tu cuenta <strong>Taskin</strong>.</p>
+            
+            <form action="cambiar_contraseña.php" method="post">
+                <div class="campo-grupo">
+                    <label for="nueva_contraseña">
+                        <i class="fas fa-lock"></i>
+                        Nueva contraseña:
+                    </label>
+                    <input type="password" name="nueva_contraseña" id="nueva_contraseña" required>
+                </div>
+                
+                <div class="campo-grupo">
+                    <label for="repetir_contraseña">
+                        <i class="fas fa-lock"></i>
+                        Repite la contraseña:
+                    </label>
+                    <input type="password" name="repetir_contraseña" id="repetir_contraseña" required>
+                </div>
+                
+                <!-- Campo oculto con el token de recuperación -->
+                <input type="hidden" name="token" value="<?php echo $token; ?>">
+                
+                <!-- Mensajes de error si existen -->
+                <div class="error_cuenta">
+                    <?php if (isset($_SESSION['error_contraseña'])): ?>
+                        <div class="mensaje-error">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p><?php echo $_SESSION['error_contraseña']; ?></p>
+                        </div>
+                        <?php unset($_SESSION['error_contraseña']); ?>
+                    <?php endif; ?>
+                </div>
+                
+                <div class="acciones">
+                    <button type="submit" class="btn btn-primary">
+                        
+                        Cambiar contraseña
+                    </button>
+                    
+                    <a href="login.php" class="btn btn-secundario">
+                        
+                        Cancelar
+                    </a>
+                </div>
+            </form>
         </div>
+    </div>
 
-        <div class="botones">
-            <button type="submit">Cambiar contraseña</button>
-            <button><a href="login.php">Cancelar</a></button>
-        </div>
-        
-    </fieldset>
-</form>
+    <style>
+        .cambiar-contraseña {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .contenido-form {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 550px;
+            width: 100%;
+            border: 2px solid #e8f0ff;
+        }
+
+        .icono-form {
+            margin-bottom: 25px;
+        }
+
+        .icono-form i {
+            font-size: 4rem;
+            color: #2196f3;
+            animation: keyAnimation 0.6s ease-in-out;
+        }
+
+        @keyframes keyAnimation {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2) rotate(180deg);
+            }
+            100% {
+                transform: scale(1) rotate(360deg);
+                opacity: 1;
+            }
+        }
+
+        .contenido-form h2 {
+            color: #2196f3;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .descripcion {
+            color: #6c757d;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .campo-grupo {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .campo-grupo label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            color: #495057;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .campo-grupo label i {
+            margin-right: 10px;
+            color: #2196f3;
+            width: 20px;
+        }
+
+        .campo-grupo input[type="password"] {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+        }
+
+        .campo-grupo input[type="password"]:focus {
+            outline: none;
+            border-color: #2196f3;
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+        }
+
+        .error_cuenta {
+            margin: 20px 0;
+        }
+
+        .mensaje-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border: 1px solid #f5c6cb;
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+
+        .mensaje-error i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .mensaje-error p {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .acciones {
+            margin-top: 35px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            min-width: 160px;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #00c853;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #007b33;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 200, 83, 0.3);
+        }
+
+        .btn-secundario {
+            background-color: #2196f3;
+            color: white;
+        }
+
+        .btn-secundario:hover {
+            background-color: #0b66c3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .contenido-form {
+                padding: 40px 25px;
+                margin: 15px;
+            }
+            
+            .contenido-form h2 {
+                font-size: 1.6rem;
+            }
+            
+            .icono-form i {
+                font-size: 3.5rem;
+            }
+            
+            .acciones {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contenido-form {
+                padding: 30px 20px;
+            }
+            
+            .descripcion {
+                font-size: 1rem;
+            }
+            
+            .campo-grupo input[type="password"] {
+                padding: 12px 15px;
+            }
+        }
+    </style>

@@ -132,11 +132,11 @@
 
         .contenido-form {
             background: white;
-            padding: 50px 40px;
+            
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
-            max-width: 600px;
+            max-width: 500px;
             width: 100%;
             border: 2px solid #e8f0ff;
         }

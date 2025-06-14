@@ -22,12 +22,10 @@
         
         <div class="acciones">
             <a href="crear_cuenta.php" class="btn btn-primary">
-                 
                 Registrarse de nuevo
             </a>
             
             <a href="login.php" class="btn btn-secundario">
-                 
                 Iniciar Sesión
             </a>
         </div>
@@ -45,13 +43,13 @@
 
 .contenido-error {
     background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
     max-width: 500px;
     width: 100%;
-    border: 2px solid #f5c6cb;
+    border: 2px solid #e8f0ff;
 }
 
 .icono-error i {
@@ -86,7 +84,7 @@
 }
 
 .solucion {
-    background-color:rgba(255, 243, 205, 0.74);
+    background-color: rgba(255, 243, 205, 0.74);
     color: #856404;
     padding: 20px;
     border-radius: 8px;
@@ -106,13 +104,15 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 12px 24px;
+    padding: 15px 30px;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
+    font-size: 1rem;
     transition: all 0.3s ease;
-    min-width: 150px;
+    min-width: 160px;
     justify-content: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 .btn-primary {
@@ -123,6 +123,7 @@
 .btn-primary:hover {
     background-color: #007b33;
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 200, 83, 0.3);
 }
 
 .btn-secundario {
@@ -133,12 +134,13 @@
 .btn-secundario:hover {
     background-color: #0b66c3;
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
 }
 
 @media (max-width: 768px) {
     .contenido-error {
-        padding: 30px 20px;
-        margin: 10px;
+        padding: 40px 25px;
+        margin: 15px;
     }
     
     .acciones {
@@ -148,7 +150,13 @@
     
     .btn {
         width: 100%;
-        max-width: 250px;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido-error {
+        padding: 30px 20px;
     }
 }
 </style>

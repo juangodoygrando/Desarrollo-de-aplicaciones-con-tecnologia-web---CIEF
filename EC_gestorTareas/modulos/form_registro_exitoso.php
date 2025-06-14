@@ -63,18 +63,17 @@ if (isset($_SESSION['usuario_registrado'])) {
     align-items: center;
     min-height: 75vh;
     padding: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    border-radius: 20px;
 }
 
 .contenido-exito {
+    background: white;
     padding: 50px 40px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
     max-width: 550px;
     width: 100%;
-    border: 2px solid #e8f5e8;
+    border: 2px solid #e8f0ff;
 }
 
 .icono-exito {
@@ -84,7 +83,7 @@ if (isset($_SESSION['usuario_registrado'])) {
 .icono-exito i {
     font-size: 5rem;
     color: #28a745;
-    
+    animation: checkAnimation 0.8s ease-in-out;
 }
 
 @keyframes checkAnimation {
@@ -127,7 +126,6 @@ if (isset($_SESSION['usuario_registrado'])) {
     padding: 25px;
     border-radius: 12px;
     margin: 25px 0;
-    
 }
 
 .check-item {
@@ -188,12 +186,12 @@ if (isset($_SESSION['usuario_registrado'])) {
 
 .btn-primary:hover {
     background-color: #007b33;
-    
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 200, 83, 0.3);
 }
 
 .btn-secundario {
-  background-color: #2196f3;
-    
+    background-color: #2196f3;
     color: white;
     border: none;
 }
@@ -201,7 +199,7 @@ if (isset($_SESSION['usuario_registrado'])) {
 .btn-secundario:hover {
     background-color: #0b66c3;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.3);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
 }
 
 @media (max-width: 768px) {

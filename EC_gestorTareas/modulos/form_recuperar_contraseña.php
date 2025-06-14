@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar Contraseña - Taskin</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <div class="recuperar-contraseña">
+<div class="recuperar-contraseña">
         <div class="contenido-form">
             <div class="icono-form">
                 <i class="fas fa-envelope-open-text"></i>
@@ -39,12 +30,10 @@
                 
                 <div class="acciones">
                     <button type="submit" class="btn btn-primary">
-                        
                         Recuperar contraseña
                     </button>
                     
                     <a href="login.php" class="btn btn-secundario">
-
                         Cancelar
                     </a>
                 </div>
@@ -52,7 +41,6 @@
             
             <div class="enlace-adicional">
                 <a href="login.php" class="enlace-recuerdo">
-                    
                     Ya recordé la contraseña
                 </a>
             </div>
@@ -60,9 +48,6 @@
     </div>
 
     <style>
-        
-        
-
         .recuperar-contraseña {
             display: flex;
             justify-content: center;
@@ -72,9 +57,10 @@
         }
 
         .contenido-form {
+            background: white;
             padding: 50px 40px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             text-align: center;
             max-width: 550px;
             width: 100%;
@@ -143,7 +129,7 @@
         .campo-grupo input[type="email"] {
             width: 100%;
             padding: 15px 20px;
-            border: 2px solid #2196f3;
+            border: 2px solid #e9ecef;
             border-radius: 10px;
             font-size: 1rem;
             transition: all 0.3s ease;
@@ -253,8 +239,8 @@
         }
 
         .enlace-recuerdo:hover {
-            
-            transform: translateY(px);
+            color: #0b66c3;
+            background-color: rgba(33, 150, 243, 0.1);
         }
 
         .enlace-recuerdo i {
@@ -300,5 +286,3 @@
             }
         }
     </style>
-</body>
-</html>

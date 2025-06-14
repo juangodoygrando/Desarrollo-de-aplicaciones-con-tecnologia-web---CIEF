@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cuenta - Taskin</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-
-<body>
-    <div class="registro-container">
+<div class="registro-container">
         <div class="contenido-form">
             <div class="icono-form">
                 <i class="fas fa-user-plus"></i>
@@ -99,12 +88,10 @@
 
                 <div class="acciones">
                     <button type="submit" class="btn btn-primary">
-
                         Crear cuenta
                     </button>
 
                     <button type="reset" class="btn btn-reset">
-
                         Limpiar campos
                     </button>
                 </div>
@@ -126,13 +113,11 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         .contenido-form {
             background: white;
-            
+            padding: 50px 40px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -176,7 +161,7 @@
         }
 
         .descripcion {
-
+            color: #6c757d;
             margin-bottom: 35px;
             font-size: 1.1rem;
             line-height: 1.5;
@@ -187,10 +172,15 @@
             margin-bottom: 5px;
         }
 
+        .campo-grupo {
+            margin-bottom: 25px;
+        }
+
         .campo-grupo label {
             display: flex;
             align-items: center;
-            margin-bottom: 3px;
+            margin-bottom: 8px;
+            color: #495057;
             font-weight: 500;
             font-size: 1rem;
         }
@@ -202,7 +192,9 @@
         }
 
         .campo-grupo input {
-            border: 0.5px solid rgba(33, 149, 243, 0.61);
+            width: 100%;
+            
+            border: 2px solid #e9ecef;
             border-radius: 10px;
             font-size: 1rem;
             transition: all 0.3s ease;
@@ -253,7 +245,7 @@
         }
 
         .acciones {
-            margin-top: 35px;
+           /*  margin-top: 35px; */
             display: flex;
             gap: 20px;
             justify-content: center;
@@ -296,7 +288,7 @@
         .btn-reset:hover {
             background-color: #0b66c3;
             transform: translateY(-2px);
-
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
         }
 
         .enlace-adicional {
@@ -319,7 +311,7 @@
 
         .enlace-login:hover {
             color: #0b66c3;
-
+            background-color: rgba(33, 150, 243, 0.1);
         }
 
         .enlace-login i {

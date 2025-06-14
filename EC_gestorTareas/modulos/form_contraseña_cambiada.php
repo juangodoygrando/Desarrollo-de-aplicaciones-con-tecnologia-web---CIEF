@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contraseña Actualizada - Taskin</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <div class="mensaje-exito-container">
+<div class="mensaje-exito-container">
         <div class="contenido-exito">
             <div class="icono-exito">
                 <i class="fas fa-check-circle"></i>
@@ -33,12 +24,10 @@
             
             <div class="acciones">
                 <a href="login.php" class="btn btn-primary">
-                    
                     Iniciar sesión
                 </a>
                 
                 <a href="index.php" class="btn btn-secundario">
-                    
                     Volver al inicio
                 </a>
             </div>
@@ -53,25 +42,23 @@
     </div>
 
     <style>
-        
         .mensaje-exito-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             padding: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            border: 2px solid #e8f0ff;
-            border-radius: 20px;
         }
 
         .contenido-exito {
+            background: white;
+            padding: 50px 40px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             text-align: center;
             max-width: 550px;
             width: 100%;
-            border: 2px solid #e8f5e8;
+            border: 2px solid #e8f0ff;
         }
 
         .icono-exito {

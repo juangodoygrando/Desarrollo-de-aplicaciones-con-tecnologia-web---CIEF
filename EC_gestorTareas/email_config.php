@@ -1,12 +1,22 @@
 <?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-//Load Composer's autoloader (created by composer, not included with PHPMailer)
+
 require './vendor/autoload.php';
+
+
+if (file_exists('.env')) {
+    $lines = file('.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos($line, '=') !== false && strpos($line, '#') !== 0) {
+            list($key, $value) = explode('=', $line, 2);
+            $_ENV[trim($key)] = trim($value);
+        }
+    }
+}
 
 if (!isset($email) || !isset($usuario) || !isset($body)) {
     $email_error = "Variables de email no definidas correctamente";
@@ -14,45 +24,37 @@ if (!isset($email) || !isset($usuario) || !isset($body)) {
     return;
 }
 
-//Create an instance; passing `true` enables exceptions
+
 $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = 0;  // 0 para no mostrar ningún mensaje   
-    $mail->isSMTP();    //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com'; // Tu servidor SMTP                   
-    $mail->SMTPAuth   = true; //Enable SMTP authentication
-    $mail->Username   = 'juani.godoy27@gmail.com';  // Tu cuenta de Gmail
-    $mail->Password   = 'xkvpxtxqisurpxgc';    // De tu cuenta de Gmail 
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //Enable implicit TLS encryption
-    $mail->Port  = 587;  // Necesario para GMail              //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->SMTPDebug = 0; 
+    $mail->isSMTP();   
+    $mail->Host       = $_ENV['SMTP_HOST'] ?? 'smtp.gmail.com';                   
+    $mail->SMTPAuth   = true; 
+    $mail->Username   = $_ENV['SMTP_USERNAME'] ?? '';  
+    $mail->Password   = $_ENV['SMTP_PASSWORD'] ?? '';  
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+    $mail->Port       = $_ENV['SMTP_PORT'] ?? 587;              
 
     //Recipients
-    $mail->setFrom('juani.godoy27@gmail.com', 'Taskin');           // Remitente
-    $mail->addAddress($email,$usuario);     // Receptor
-    // $mail->addAddress('ellen@example.com');               //Name is optional
-    // $mail->addReplyTo('info@example.com', 'Information');
-    // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
-
-    //Attachments
-    // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+    $mail->setFrom($_ENV['SMTP_USERNAME'] ?? '', 'Taskin');           
+    $mail->addAddress($email, $usuario);     
 
     //Content
     $mail->CharSet = 'UTF-8';
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = $subject; // Asunto del mensaje
-    $mail->Body = $body; // Usa el cuerpo definido en el archivo que incluye este
-    $mail->AltBody = 'Gracias por registrarte en Taskin. Por favor, confirma tu correo haciendo clic en el enlace enviado.'; // Cuerpo alternativo (sin HTML)
+    $mail->isHTML(true);                                  
+    $mail->Subject = 'Confirma tu registro en Taskin'; 
+    $mail->Body = $body; 
+    $mail->AltBody = 'Gracias por registrarte en Taskin. Por favor, confirma tu correo haciendo clic en el enlace enviado.'; 
 
     $mail->send();
-    echo 'Correo enviado correctamente<br>'; // Cuando todo ha ido bien
+    echo 'Correo enviado correctamente<br>'; 
     
 } catch (Exception $e) {
     $email_error = "Error al enviar el correo: {$mail->ErrorInfo}";
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"; // Cuando no ha ido bien
+    error_log("Error de email: " . $mail->ErrorInfo); // Log seguro
+    echo "Error al enviar el correo. Inténtalo más tarde."; // Mensaje genérico al usuario
 }
 ?>
-

@@ -51,6 +51,31 @@
                     </div>
                 </div>
 
+                <!-- Requisitos de contraseña -->
+                <div class="requisitos-password">
+                    <h4><i class="fas fa-shield-alt"></i> Requisitos de contraseña:</h4>
+                    <div class="requisito-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Mínimo 8 caracteres</span>
+                    </div>
+                    <div class="requisito-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Al menos una mayúscula (A-Z)</span>
+                    </div>
+                    <div class="requisito-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Al menos una minúscula (a-z)</span>
+                    </div>
+                    <div class="requisito-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Al menos un número (0-9)</span>
+                    </div>
+                    <div class="requisito-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Al menos un carácter especial (!@#$%...)</span>
+                    </div>
+                </div>
+
                 <!-- ERRORES -->
                 <div class="errores-container">
                     <?php if (isset($_SESSION['error_cuenta']) && $_SESSION['error_cuenta']): ?>
@@ -59,6 +84,14 @@
                             <p>Por favor, completa todos los campos correctamente</p>
                         </div>
                         <?php unset($_SESSION['error_cuenta']); ?>
+                    <?php endif; ?>
+
+                    <?php if (isset($_SESSION['error_password']) && $_SESSION['error_password']): ?>
+                        <div class="mensaje-error">
+                            <i class="fas fa-key"></i>
+                            <p><?php echo $_SESSION['error_password']; ?></p>
+                        </div>
+                        <?php unset($_SESSION['error_password']); ?>
                     <?php endif; ?>
 
                     <?php if (isset($_SESSION['user_repe']) && $_SESSION['user_repe']): ?>
@@ -141,12 +174,10 @@
                 transform: scale(0) rotate(-180deg);
                 opacity: 0;
             }
-
             50% {
                 transform: scale(1.1) rotate(0deg);
                 opacity: 0.8;
             }
-
             100% {
                 transform: scale(1) rotate(0deg);
                 opacity: 1;
@@ -172,9 +203,7 @@
             margin-bottom: 5px;
         }
 
-        .campo-grupo {
-            margin-bottom: 25px;
-        }
+        
 
         .campo-grupo label {
             display: flex;
@@ -213,6 +242,42 @@
             font-style: italic;
         }
 
+        .requisitos-password {
+            background-color: #e7f3ff;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border: 1px solid #b3d9ff;
+            text-align: left;
+        }
+
+        .requisitos-password h4 {
+            color: #0c5aa6;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .requisito-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            color: #0c5aa6;
+        }
+
+        .requisito-item i {
+            color: #28a745;
+            font-size: 0.9rem;
+            margin-right: 10px;
+            width: 16px;
+        }
+
+        .requisito-item span {
+            font-size: 0.95rem;
+        }
+
         .errores-container {
             margin: 20px 0;
         }
@@ -245,7 +310,7 @@
         }
 
         .acciones {
-           /*  margin-top: 35px; */
+            margin-top: 35px;
             display: flex;
             gap: 20px;
             justify-content: center;
@@ -359,6 +424,10 @@
 
             .mensaje-error {
                 padding: 12px 15px;
+            }
+
+            .requisitos-password {
+                padding: 15px;
             }
         }
     </style>

@@ -1,0 +1,66 @@
+# ========================================
+# ARCHIVOS SENSIBLES
+# ========================================
+.env
+.env.local
+.env.production
+.env.staging
+config/database.php
+config/email.php
+
+# ========================================
+# DIRECTORIOS DE DEPENDENCIAS
+# ========================================
+/vendor/
+/node_modules/
+/bower_components/
+
+# ========================================
+# ARCHIVOS DE LOGS Y CACHÉ
+# ========================================
+*.log
+/logs/
+/cache/
+/tmp/
+error.log
+access.log
+
+# ========================================
+# ARCHIVOS DE CONFIGURACIÓN LOCAL
+# ========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ========================================
+# ARCHIVOS DE BACKUP Y TEMPORALES
+# ========================================
+*.bak
+*.backup
+*.tmp
+*.temp
+
+# ========================================
+# ARCHIVOS DE SUBIDA DE USUARIOS
+# ========================================
+/uploads/
+/storage/uploads/
+/public/uploads/
+
+# ========================================
+# ARCHIVOS DE SISTEMA
+# ========================================
+.DS_Store
+Thumbs.db
+*.pid
+
+# ========================================
+# CERTIFICADOS Y CLAVES
+# ========================================
+*.pem
+*.key
+*.crt
+*.p12
+ssl/

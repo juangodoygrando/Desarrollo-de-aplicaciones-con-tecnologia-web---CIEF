@@ -1,0 +1,107 @@
+body.crear_cuenta {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0f7fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  h1{
+    font-size: 3rem;
+  }
+
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+form fieldset {
+  border: none;
+  padding: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  font-size:1.3rem ;
+}
+
+form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  
+}
+
+.botones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btnFom {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+
+.btnEnviar {
+  background-color: #00c853;
+  
+}
+.btnEnviar:hover {
+  background-color: #007b33;
+}
+
+.btnBorrar {
+  background-color: #2196f3;
+}
+.btnBorrar:hover {
+  background-color: #0b66c3;
+}
+
+.btnVolver {
+  margin-top: 1rem;
+  display: inline-block;
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.btnVolver:hover {
+  text-decoration: underline;
+}
+
+.error_cuenta p {
+  color: red;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+main img {
+  width: 250px;
+  height: auto;
+}
+

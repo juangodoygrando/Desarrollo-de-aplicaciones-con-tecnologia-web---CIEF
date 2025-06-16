@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.index-main {
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;            
+    padding: 2rem;
+    
+}
+.logo-container{
+    
+    img {
+    min-width: 25rem;
+}
+}
+a {
+  margin-top: 1rem;
+  display: inline-block;
+  color: #2196f3;
+  text-decoration: none;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.login-box {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 23rem;
+    height: 22rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    
+}
+
+fieldset {
+    border: none;
+    h2{
+        align-items: center;
+    }
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0.3rem;
+    text-align: left;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 48%;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #00c853;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #007b33;
+}
+
+button[type="reset"] {
+    background-color: #2196f3;
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background-color: #0b66c3;
+}
+
+.error_cuenta p {
+    color: red;
+    margin-top: 1rem;
+    font-weight:500;
+}
